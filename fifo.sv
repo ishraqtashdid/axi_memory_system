@@ -24,7 +24,7 @@ module fifo #(
 
     assign inp_rdy = ~full;
     assign out_val = ~empty;
-
+    //random
     /////////////
     //reset block
     /////////////
