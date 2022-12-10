@@ -7,8 +7,8 @@ package axi_pkg;
 
     typedef bit [ID_WIDTH-1:0]  id_t;
     typedef struct packed {
-        bit [ADDR_WIDTH-1:12]  bank_addr;
-        bit [11:SIZE]          row_addr;
+        bit [ADDR_WIDTH-13:0]  bank_addr;
+        bit [11-SIZE:0]        row_addr;
         bit [SIZE-1:0]         col_addr;
     } addr_t;
     typedef bit [7:0] len_t;
