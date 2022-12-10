@@ -13,7 +13,7 @@ module mem_bank #(
     logic [(2**(12-SIZE))-1:0][(2**SIZE)-1:0][7:0] mem;
     logic [(2**SIZE)-1:0][7:0] rdata_buff;
 
-    assign rdata = cs ? rdata : 'z;
+    assign rdata = cs ? rdata_buff : 'z;
 
     always @ (posedge clk)
     begin
