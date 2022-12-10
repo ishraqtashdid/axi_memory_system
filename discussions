@@ -23,46 +23,6 @@
 */
 
 
-typedef bit [ID_WIDTH-1:0]  id_t;
-
-typedef struct packed {
-    bit [ADDR_WIDTH-1:12]  bank_addr;
-    bit [11:SIZE]          row_addr;
-    bit [SIZE-1:0]         col_addr;
-} addr_t;
-
-typedef bit lock_t;
-
-typedef bit [2:0]  prot_t;
-
-typedef bit [3:0]  region_t;
-
-typedef bit [DATA_WIDTH/8-1][7:0]  data_t;
-
-typedef bit [DATA_WIDTH/8-1]  strb_t;
-
-typedef bit last_t;
-
-typedef struct packed {
-    id_t      id;
-    addr_t    addr;
-    lock_t    lock;
-    prot_t    prot;
-    region_t  region;
-} rd_req_t;
-
-typedef struct packed {
-    id_t      id;
-    addr_t    addr;
-    lock_t    lock;
-    prot_t    prot;
-    region_t  region;
-    data_t    data;
-    strb_t    strb;
-    last_t    last;
-} wr_req_t;
-
-
 
 ADDR_OUT = ADDR & ('1 << SIZE);
 
